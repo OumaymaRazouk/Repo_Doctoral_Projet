@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/utilisateurs_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+
+seed:
+  superadmin:
+    email: superadmin@docto.local
+    password: ChangeMe123!
