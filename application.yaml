@@ -12,3 +12,10 @@ management:
     web:
       exposure:
         include: health,info
+
+
+
+jwt:
+  secret: 8vU1#jLw^TzR2$Nf6!xB7mKp3@aQ9ZyG0sD4rE8hF1wL6jM2nP5vX7uC9tH3gJ
+  access-token-ttl: PT24H
+  refresh-token-ttl: P7D
