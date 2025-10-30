@@ -1,34 +1,36 @@
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: inscription
-          uri: lb://inscription-service
-          predicates:
-            - Path=/inscription/**
-          filters:
-            - StripPrefix=1
-        - id: users
-          uri: lb://utilisateurs-service
-          predicates:
-            - Path=/users/**
-          filters:
-            - StripPrefix=1
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-              - OPTIONS
-            allowedHeaders: "*"
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          routes:
+            - id: inscription
+              uri: lb://inscription-service
+              predicates:
+                - Path=/inscription/**
+              filters:
+                - StripPrefix=1
+            - id: users
+              uri: lb://utilisateurs-service
+              predicates:
+                - Path=/users/**
+              filters:
+                - StripPrefix=1
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowedOrigins: "*"
+                allowedMethods:
+                  - GET
+                  - POST
+                  - PUT
+                  - DELETE
+                  - OPTIONS
+                allowedHeaders: "*"
 
 management:
   endpoints:
@@ -37,4 +39,4 @@ management:
         include: health,info,gateway
   endpoint:
     gateway:
-      enabled: true
+      access: read-only
