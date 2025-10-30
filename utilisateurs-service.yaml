@@ -13,6 +13,6 @@ spring:
 
 
 seed:
-  superadmin:
+  super-admin:
     email: superadmin@docto.local
     password: ChangeMe123!
