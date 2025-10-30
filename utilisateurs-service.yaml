@@ -16,3 +16,4 @@ seed:
   super-admin:
     email: superadmin@docto.local
     password: ChangeMe123!
+
