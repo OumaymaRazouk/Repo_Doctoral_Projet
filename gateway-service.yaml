@@ -20,7 +20,7 @@ spring:
                 - Path=/users/**
               filters:
                 - StripPrefix=1
-          globalcors:
+          global-cors:
             cors-configurations:
               '[/**]':
                 allowed-origins: "http://localhost:4200"
