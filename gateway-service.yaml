@@ -20,6 +20,12 @@ spring:
                 - Path=/users/**
               filters:
                 - StripPrefix=1
+            - id: soutenance
+              uri: lb://soutenance-service
+              predicates:
+                - Path=/soutenance/**
+              filters:
+                - StripPrefix=1
           global-cors:
             cors-configurations:
               '[/**]':
