@@ -1,0 +1,9 @@
+# Base URLs des services amont (mode dev local, surchargeables via Spring Cloud Config)
+
+inscription:
+  service:
+    base-url: http://localhost:8082
+
+soutenance:
+  service:
+    base-url: http://localhost:8084

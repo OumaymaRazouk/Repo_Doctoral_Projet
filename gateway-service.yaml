@@ -26,6 +26,12 @@ spring:
             - Path=/soutenance/**
           filters:
             - StripPrefix=1
+        - id: documents
+          uri: lb://document-service
+          predicates:
+            - Path=/documents/**
+          filters:
+            - StripPrefix=1
         - id: inscription-stats
           uri: lb://inscription-stat-soap-service
           predicates:

@@ -10,3 +10,36 @@ spring:
     show-sql: false
     open-in-view: false
     database-platform: org.hibernate.dialect.MySQLDialect
+
+
+  spring:
+    graphql:
+      graphiql:
+        enabled: true
+      websocket:
+        path: /graphql
+
+    servlet:
+      multipart:
+        max-file-size: 20MB
+        max-request-size: 40MB
+
+    kafka:
+      bootstrap-servers: localhost:9092
+      producer:
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  storage:
+    base-path: C:/PRJ/Doctoral-project/doctoral-uploads
+
+  app:
+    notifications:
+      topic: inscription-events
+
+  soutenance:
+    prereq:
+      min-publications: 2
+      min-communications: 2
+      min-heures-formation: 200
+      max-duree-annees: 6

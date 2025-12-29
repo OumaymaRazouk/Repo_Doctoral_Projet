@@ -1,0 +1,7 @@
+soutenance:
+  service:
+    url: http://localhost:8084/graphql
+
+grpc:
+  server:
+    port: 9091
