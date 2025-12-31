@@ -19,7 +19,7 @@ feign:
         connect-timeout: 5000
         read-timeout: 5000
 
-spring:
+  spring:
   servlet:
     multipart:
       max-file-size: 20MB

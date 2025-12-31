@@ -12,8 +12,8 @@ spring:
   mail:
     host: ${MAIL_HOST:smtp.gmail.com}
     port: ${MAIL_PORT:587}
-    username: ${MAIL_USERNAME:chtiouimariam07450@gmail.com}
-    password: ${MAIL_PASSWORD:nxoynjjevipeahmc}
+    username: ${MAIL_USERNAME:chtiouimariam745@gmail.com}
+    password: ${MAIL_PASSWORD:xenqengbyeleueov}
     properties:
       mail:
         smtp:
@@ -27,9 +27,9 @@ app:
   notifications:
     topic: inscription-events
     email:
-      from: ${APP_NOTIF_EMAIL_FROM:chtiouimariam07450@gmail.com}
+      from: ${APP_NOTIF_EMAIL_FROM:chtiouimariam745@gmail.com}
       to:
-        fallback: ${APP_NOTIF_EMAIL_FALLBACK:chtiouimariam745@gmail.com}
+        fallback: ${APP_NOTIF_EMAIL_FALLBACK:oumaymarazouk195@gmail.com}
         doctorant: ${APP_NOTIF_EMAIL_DOCTORANT:}
         directeur: ${APP_NOTIF_EMAIL_DIRECTEUR:}
         admin: ${APP_NOTIF_EMAIL_ADMIN:}
