@@ -1,17 +1,7 @@
 spring:
-  kafka:
-    bootstrap-servers: kafka:9092
-    consumer:
-      group-id: notification-service
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-    listener:
-      missing-topics-fatal: false
-
   mail:
     host: ${MAIL_HOST:smtp.gmail.com}
-    port: ${MAIL_PORT:465}
+    port: ${MAIL_PORT:587}
     username: ${MAIL_USERNAME:chtiouimariam745@gmail.com}
     password: ${MAIL_PASSWORD:liexbwevulmspxmy}
     properties:
@@ -19,13 +9,13 @@ spring:
         smtp:
           auth: true
           starttls:
-            enable: true
+            enable: ${MAIL_STARTTLS_ENABLE:false}
           ssl:
+            enable: ${MAIL_SSL_ENABLE:true}
             trust: "*"
 
 app:
   notifications:
-    topic: inscription-events
     email:
       from: ${APP_NOTIF_EMAIL_FROM:chtiouimariam745@gmail.com}
       to:
