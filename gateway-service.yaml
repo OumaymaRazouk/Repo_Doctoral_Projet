@@ -14,6 +14,10 @@ spring:
             - Path=/inscription/**
           filters:
             - StripPrefix=1
+        - id: auth
+          uri: lb://utilisateurs-service
+          predicates:
+            - Path=/auth/**
         - id: users
           uri: lb://utilisateurs-service
           predicates:
