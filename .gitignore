@@ -1,0 +1,11 @@
+# Logs / JVM crash files
+*.log
+hs_err_pid*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Environment files
+.env
+.env.*
